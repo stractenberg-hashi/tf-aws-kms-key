@@ -7,7 +7,8 @@ resource "aws_kms_key" "vault" {
   #deletion_window_in_days = 10
 
   tags = {
-    Name = "${var.engineer}-vault-kms-unseal"
+    Name    = "${var.engineer}-vault-kms-unseal",
+    Created = "via Terraform"
   }
 }
 
